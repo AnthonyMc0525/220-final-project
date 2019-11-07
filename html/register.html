@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <script src="../script/main.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <title>Register</title>
   </head>
@@ -12,10 +11,10 @@
     <form method="post" id="register-form" accept-charset="utf-8">
       <label> Select Role: 
         <select name="role" id="role">
-          <option value="Patient">Patient</option>
           <option value="Are">Are</option>
+          <option value="Patient">Patient</option>
           <option value="Simple">Simple</option>
-          <option value="Placeholders">Placeholders</option>
+          <option value="Placeholders">Placeholders?</option>
         </select>
       </label>
       <label>First Name: <input type="text" value="" name="fName" id="fName"/></label>
@@ -24,15 +23,12 @@
       <label>Phone Number: <input type="text" value="" name="phone" id="phone"/></label>
       <label>Password: <input type="text" value="" name="password" id="password"/></label>
       <label>Date of Birth: <input type="text" value="" name="DoB" id="DoB"/></label>
-      <label>Family Code: <input type="text" value="" name="family-code" id="family-code"/></label>
-      <label>Emergency Contact: <input type="text" value="" name="Econtact" id="Econtact"/></label>
-      <label>Relation to Emergency Contact: <input type="text" value="" name="relationTo" id="relationTo" class="visability"/></label>
-      <label>PatientID: <input type="text" value="" name="patientId" id="patientId" class="visability"/></label>
-      <label>Group: <input type="text" value="" name="group" id="group" class="visability"/></label>
-      <label>Admission Date: <input type="text" value="" name="admission-date" id="admission-date" class="visability"/></label>
-      <label>Date: <input type="text" value="" name="date" id="date" class="visability"/></label>
+      <label class="visability" id="famLabel">Family Code: <input type="text" value="" name="family-code" id="family-code" class="visability"/></label>
+      <label class="visability" id="Elabel">Emergency Contact: <input type="text" value="" name="Econtact" id="Econtact" class="visability"/></label>
+      <label class="visability" id="relationLabel">Relation to Emergency Contact: <input type="text" value="" name="relationTo" id="relationTo" class="visability"/></label>
       <input type="submit" value="Submit" name="submit" id="submit"/>
       <a href="http://localhost/old-people-project/html/index.html" target="_self">Cancel</a>
     </form>
+    <script src="../script/main.js" charset="utf-8"></script>
   </body>
 </html>

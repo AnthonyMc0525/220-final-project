@@ -1,26 +1,34 @@
+//for the register page. shows patient form
 let role = document.getElementById('role');
 console.log(role);
 role.addEventListener("change", (event) => {
-  console.log('Hello world');
   let chosen = role.options[role.selectedIndex].value;
+  console.log(chosen);
   if(chosen == "Patient"){
-    let patientId = document.getElementById("patientId");
-    patientId.style.visibility = "visible";
-    let group = document.getElementById("group");
-    group.style.visibility = "visible";
-    let addDate = document.getElementById("admission-date");
-    addDate.style.visibility = "visible";
-    let currDate = document.getElementById("date");
-    currDate.style.visibility = "visible";
-  } else {
-    let patientId = document.getElementById("patientId");
-    patientId.style.visibility = "hidden";
-    let group = document.getElementById("group");
-    group.style.visibility = "hidden";
-    let addDate = document.getElementById("admission-date");
-    addDate.style.visibility = "hidden";
-    let currDate = document.getElementById("date");
-    currDate.style.visibility = "hidden";
-
+    let famCode = document.getElementById("family-code");
+    famCode.style.visibility = "visible";
+    let emergency = document.getElementById("Econtact");
+    emergency.style.visibility = "visible";
+    let relation = document.getElementById("relationTo");
+    relation.style.visibility = "visible";
+    let LfamCode = document.getElementById("famLabel");
+    LfamCode.style.visibility = "visible";
+    let Lemergency = document.getElementById("Elabel");
+    Lemergency.style.visibility = "visible";
+    let Lrelation = document.getElementById("relationLabel");
+    Lrelation.style.visibility = "visible";
+  } else if (chosen != "Patient"){
+    let famCode = document.getElementById("family-code");
+    famCode.style.visibility = "hidden";
+    let emergency = document.getElementById("Econtact");
+    emergency.style.visibility = "hidden";
+    let relation = document.getElementById("relationTo");
+    relation.style.visibility = "hidden";
+    let LfamCode = document.getElementById("famLabel");
+    LfamCode.style.visibility = "hidden";
+    let Lemergency = document.getElementById("Elabel");
+    Lemergency.style.visibility = "hidden";
+    let Lrelation = document.getElementById("relationLabel");
+    Lrelation.style.visibility = "hidden";
   }
 });
