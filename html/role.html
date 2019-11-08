@@ -2,15 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width" />
-    <title>Role</title>
+    <title> Role </title>
   </head>
   <body>
-    <h1>Create Role</h1>
+    <h1> Create Role </h1>
     <!-- this is where the php will go for the table to display current roles -->
     <form  method="post" accept-charset="utf-8">
-      <label>New Role: <input type="text" value="" name="newRole" id="newRole"/></label>
-      <label>Access Level: <input type="text" value="" name="accessLevel" id="accessLevel"/></label>
+      <label class="register"> New Role : <input type="text" value="" name="newRole" id="newRole"/></label>
+      <label class="register"> Access Level : <input type="text" value="" name="accessLevel" id="accessLevel"/></label>
+      <button type="submit" value="Submit" name="submit" class="submit" form="login"> Submit </button>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
   </body>
 </html>
