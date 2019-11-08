@@ -1,0 +1,67 @@
+.num1{
+  font-family: Apple Chancery, cursive;
+  font-size: 80px;
+  margin-bottom: 10%;
+}
+
+body, html{
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  background-image: url(../pictures/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.cancel{
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 30px;
+  padding-left: 4px;
+  padding-right: 6px;
+  padding-top: .5px;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+
+.waffle{
+  display: block;
+  padding: 5px;
+  font-size: 40px;
+  margin: 10px 0 0 0;
+}
+
+.pancake{
+  padding: 5px;
+  font-size: 15px;
+  margin: 10px 0 0 0;
+}
+
+.submit{
+  text-decoration: none;
+  font-size: 28px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.register{
+  display: block;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.role{
+  font-size: 25px;
+}
+
+.visability{
+  display: block;
+  font-size: 25px;
+  margin-bottom: 15px;
+}

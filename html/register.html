@@ -3,31 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <title>Register</title>
+    <title> Register </title>
   </head>
-  <body>
-    <h1>Register</h1>
+  <body class="center">
+    <h1> Register </h1>
     <form method="post" id="register-form" accept-charset="utf-8">
-      <label> Select Role: 
+      <label class="role"> Select Role :
         <select name="role" id="role">
-          <option value="Are">Are</option>
-          <option value="Patient">Patient</option>
-          <option value="Simple">Simple</option>
-          <option value="Placeholders">Placeholders?</option>
+          <option value="Are"> Are </option>
+          <option value="Patient"> Patient </option>
+          <option value="Simple"> Simple </option>
+          <option value="Placeholders"> Placeholders? </option>
         </select>
       </label>
-      <label>First Name: <input type="text" value="" name="fName" id="fName"/></label>
-      <label>Last Name: <input type="text" value="" name="lName" id="lName"/></label>
-      <label>Email: <input type="text" value="" name="email" id="email"/></label>
-      <label>Phone Number: <input type="text" value="" name="phone" id="phone"/></label>
-      <label>Password: <input type="text" value="" name="password" id="password"/></label>
-      <label>Date of Birth: <input type="text" value="" name="DoB" id="DoB"/></label>
-      <label class="visability" id="famLabel">Family Code: <input type="text" value="" name="family-code" id="family-code" class="visability"/></label>
-      <label class="visability" id="Elabel">Emergency Contact: <input type="text" value="" name="Econtact" id="Econtact" class="visability"/></label>
-      <label class="visability" id="relationLabel">Relation to Emergency Contact: <input type="text" value="" name="relationTo" id="relationTo" class="visability"/></label>
-      <input type="submit" value="Submit" name="submit" id="submit"/>
-      <a href="http://localhost/old-people-project/html/index.html" target="_self">Cancel</a>
+      <label class="register"> First Name : <input class="pancake" type="text" value="" name="fName" id="fName"/></label>
+      <label class="register"> Last Name : <input class="pancake" type="text" value="" name="lName" id="lName"/></label>
+      <label class="register"> Email : <input class="pancake" type="text" value="" name="email" id="email"/></label>
+      <label class="register"> Phone Number : <input class="pancake" type="text" value="" name="phone" id="phone"/></label>
+      <label class="register"> Password : <input class="pancake" type="text" value="" name="password" id="password"/></label>
+      <label class="register"> Date of Birth : <input class="pancake" type="text" value="" name="DoB" id="DoB"/></label>
+      <label class="visability" id="famLabel"> Family Code : <input class="pancake" type="text" value="" name="family-code" id="family-code"/></label>
+      <label class="visability" id="Elabel"> Emergency Contact : <input class="pancake" type="text" value="" name="Econtact" id="Econtact"/></label>
+      <label class="visability" id="relationLabel"> Relation to Emergency Contact : <input class="pancake" type="text" value="" name="relationTo" id="relationTo"/></label>
+      <button type="submit" value="Submit" name="submit" class="submit" form="login"> Submit </button>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
     <script src="../script/main.js" charset="utf-8"></script>
   </body>
