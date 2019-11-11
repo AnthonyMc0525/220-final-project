@@ -1,0 +1,36 @@
+a {
+  background-color: hotpink;
+  box-shadow: 0 5px 0 pink;
+  color: black;
+  font-family: American Typewriter, serif;
+  font-size: 40px;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 20%;
+  width: 100%;
+}
+
+a:hover {
+  background-color: purple;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+body {
+  background-position: right;
+  background-image: url(../pictures/1270.jpg);
+  height: 100%;
+  text-align: center;
+  margin: 12%;
+}
+
+h1{
+  font-family: Apple Chancery, cursive;
+  font-size: 80px;
+  margin-bottom: 10%;
+}
