@@ -1,3 +1,10 @@
+<?php
+  session_start()
+?>
+
+<?php
+  include_once "../db.php"
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +36,19 @@
       <input type="submit" value="Submit" name="submit" id="submit"/>
       <a href="http://localhost/old-people-project/html/index.html" target="_self">Cancel</a>
     </form>
+<?php
+  //need an if statement for if the role is patient. extra data will be added when form is submitted
+  if(@$_POST['role'] && @$_POST['fName'] && @$_POST['lName'] && @$_POST['email'] && @$_POST['phone'] && @$_POST['password'] && @$_POST['DoB'] && @$_POST['family-code'] && @$_POST['Econtact'] && @$_POST['relationTo']){
+  $sql = "INSERT INTO `user` (`roleId`, `Fname`, `Lname`, `emailId`, `phoneNum`, `password`, `DoB`, `famCode`, `emergencyContact`, `emergencyRelation`)
+        VALUES ('{$_POST['role']}', '{$_POST['fName']}', '{$_POST['lName']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['password']}', '{$_POST['DoB']}', '{$_POST['family-code']}', '{$_POST['Econtact']}', '{$_POST['relationTo']}');";
+  mysqli_query($conn, $sql);
+  }else if(@$_POST['role'] && @$_POST['fName'] && @$_POST['lName'] && @$_POST['email'] && @$_POST['phone'] && @$_POST['password'] && @$_POST['DoB']){
+  $sql = "INSERT INTO `user` (`roleId`, `Fname`, `Lname`, `emailId`, `phoneNum`, `password`, `DoB`)
+        VALUES ('{$_POST['role']}', '{$_POST['fName']}', '{$_POST['lName']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['password']}', '{$_POST['DoB']}');";
+  mysqli_query($conn, $sql);  
+  echo "<p>Registration Successful</p>";
+  }
+?>
     <script src="../script/main.js" charset="utf-8"></script>
   </body>
 </html>
