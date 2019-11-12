@@ -68,4 +68,5 @@ body {
   display: block;
   font-size: 25px;
   margin-bottom: 15px;
+  visibility: hidden;
 }
