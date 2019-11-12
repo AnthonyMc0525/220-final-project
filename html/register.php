@@ -10,8 +10,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/main.css">
     <title> Register </title>
   </head>
   <body class="center">
@@ -46,7 +45,7 @@
   }else if(@$_POST['role'] && @$_POST['fName'] && @$_POST['lName'] && @$_POST['email'] && @$_POST['phone'] && @$_POST['password'] && @$_POST['DoB']){
   $sql = "INSERT INTO `user` (`roleId`, `Fname`, `Lname`, `emailId`, `phoneNum`, `password`, `DoB`)
         VALUES ('{$_POST['role']}', '{$_POST['fName']}', '{$_POST['lName']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['password']}', '{$_POST['DoB']}');";
-  mysqli_query($conn, $sql);  
+  mysqli_query($conn, $sql);
   echo "<p>Registration Successful</p>";
   }
 ?>

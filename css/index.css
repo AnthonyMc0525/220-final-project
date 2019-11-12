@@ -2,7 +2,7 @@ a {
   background-color: hotpink;
   box-shadow: 0 5px 0 pink;
   color: black;
-  font-family: American Typewriter, serif;
+  font-family: Chalkduster, fantasy;
   font-size: 40px;
   padding: 1em 1.5em;
   position: relative;
@@ -30,7 +30,7 @@ body {
 }
 
 h1{
-  font-family: Apple Chancery, cursive;
+  font-family: Chalkduster, fantasy;
   font-size: 80px;
   margin-bottom: 10%;
 }

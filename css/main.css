@@ -1,7 +1,11 @@
 .num1{
-  font-family: Apple Chancery, cursive;
+  font-family: Chalkduster, fantasy;
   font-size: 80px;
   margin-bottom: 10%;
+}
+
+* {
+  font-family: Chalkduster, fantasy;
 }
 
 body, html{

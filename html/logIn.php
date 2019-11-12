@@ -10,20 +10,21 @@ session_start()
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../css/main.css">
     <title>Login</title>
   </head>
   <body>
-    <h1>Log In</h1>
-    <form method="get" accept-charset="utf-8">
-      <label>Email: <input type="text" value="" name="email" id="email"/></label>
-      <label>Password: <input type="text" value="" name="password" id="password"/></label>
-      <input type="submit" value="Submit" name="submit" id="submit"/>
-      <a href="http://localhost/old-people-project/html/index.html" target="_self">Cancel</a>
+    <h1 class="num1">Log In</h1>
+    <form method="post" accept-charset="utf-8" id="login">
+      <label class="waffle"> Email : <input class="pancake" type="text" value="" name="email" id="email"/></label>
+      <label class="waffle"> Password : <input class="pancake" type="text" value="" name="password" id="password"/></label>
+      <button type="submit" value="Submit" name="submit" class="submit" form="login"> Submit </button>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
 <?php
 if(@$_GET['email'] && @$_GET['password']){
   $sql = "SELECT * FROM `user` WHERE emailId = '{$_GET['email']}' AND password = '{$_GET['password']}';";
-  $result = mysqli_query($conn, $sql);  
+  $result = mysqli_query($conn, $sql);
   if($result == false){
     echo "login failed. either the email or the password were incorrect";
   } else if($result != false){
