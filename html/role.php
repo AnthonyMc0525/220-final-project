@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <meta name="viewport" content="width=device-width" />
     <title> Role </title>
   </head>
