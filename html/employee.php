@@ -12,7 +12,7 @@
       <label>EmployeeId: <input type="text" value="" name="employeeId" id="employeeId"/></label>
       <label>New Salary: <input type="text" value="" name="salary" id="salary"/></label>
       <input type="submit" value="Submit" name="salarySubmit" id="salarySubmit"/>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
-    <a href="#" target="_self">Cancel</a>
   </body>
 </html>

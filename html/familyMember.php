@@ -12,6 +12,7 @@
       <label>Family Code: <input type="text" value="" name="family-code" id="family-code"/></label>
       <label>PatientId: <input type="text" value="" name="patientId" id="patientId"/></label>
       <input type="submit" value="Submit" name="submit" id="submit"/>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
     <!--Create a table with the info from the search given by the user-->
   </body>

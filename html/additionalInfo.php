@@ -23,21 +23,22 @@ foreach ($users as $key => $value) {
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+  <h1>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/main.css">
     <meta name="viewport" content="width=device-width" />
-    <title>Additional Info</title>
-  </head>
+    <title> Additional Info </title>
+  </h1>
   <body>
     <form action="" method="post" accept-charset="utf-8">
-      <label>Patient Id: <input type="text" value="" name="id" id="id"/></label>
-      <label>Group: <input type="text" value="" name="group" id="group"/></label>
-      <label>Admission Date: <input type="text" value="" name="date" id="date"/></label>
-      <label>Patient Name:  <input type="text" value="" name="name" id="name"/></label>
+      <label> Patient Id : <input type="text" value="" name="id" id="id"/></label>
+      <label> Group : <input type="text" value="" name="group" id="group"/></label>
+      <label> Admission Date : <input type="text" value="" name="date" id="date"/></label>
+      <label> Patient Name :  <input type="text" value="" name="name" id="name"/></label>
       <input type="submit" value="Sumbit" name="submit" id="submit"/>
       <a href="#" target="_self">Cancel</a>
     </form>
-    <div id="target">
+    <div class="target">
 <?php
 foreach($jsUsers as $key => $value){
   echo $value . "  ";

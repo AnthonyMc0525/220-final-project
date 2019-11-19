@@ -33,7 +33,7 @@
       <label class="visability" id="famLabel"> Family Code : <input class="pancake" type="text" value="" name="family-code" id="family-code"/></label>
       <label class="visability" id="Elabel"> Emergency Contact : <input class="pancake" type="text" value="" name="Econtact" id="Econtact"/></label>
       <label class="visability" id="relationLabel"> Relation to Emergency Contact : <input class="pancake" type="text" value="" name="relationTo" id="relationTo"/></label>
-      <button type="submit" value="Submit" name="submit" class="submit" form="login"> Submit </button>
+      <input type="submit" value="Sumbit" name="submit" id="submit"/>
       <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
 <?php
