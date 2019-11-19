@@ -1,3 +1,10 @@
+
+<ul>
+  <li><a class="hover" href="./index.html"> Home </a></li>
+  <li><a class="hover" href="./index.html"> Patient Info </a></li>
+  <li><a class="hover" href="./index.html" target="_blank"> Logout </a></li>
+</ul>
+
 <?php
 session_start();
 include_once "../db.php";
