@@ -10,6 +10,7 @@
     <form action="#" method="get" accept-charset="utf-8">
       <label>Date: <input type="text" value="" name="date" id="admin-date"/></label>
       <input type="submit" value="Submit" name="submit" id="submit"/>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
     <!--create table with the info of all patients info based on the search given by the admin-->
   </body>

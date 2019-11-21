@@ -12,7 +12,7 @@
       <label>Total Due: <input type="text" value="" name="totalDue" id="totalDue"/></label>
       <label>New Payment: <input type="text" value="" name="newPayment" id="newPayment"/></label>
       <input type="submit" value="Pay" name="pay" id="pay"/>
-      <a href="#" target="_self">Cancel</a>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
   </body>
 </html>

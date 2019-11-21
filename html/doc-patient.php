@@ -15,7 +15,7 @@
       <label>Afternoon Med: <input type="text" value="" name="afternoonMed" id="afternoonMed"/></label>
       <label>Night Med: <input type="text" value="" name="nightMed" id="nightMed"/></label>
       <input type="submit" value="Submit" name="submit" id="patient-submit"/>
+      <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
-    <a href="#" target="_self">Cancel</a>
   </body>
 </html>

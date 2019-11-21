@@ -8,5 +8,6 @@
   <body>
     <h1>Caregiver's Home</h1>
     <!--Use php to create a table with check boxes so that the caregiver can check the items when they know they have been completed-->
+    <a class="cancel" href="./index.html" target="_self"> Cancel </a>
   </body>
 </html>
