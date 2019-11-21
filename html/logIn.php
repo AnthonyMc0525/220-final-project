@@ -22,20 +22,21 @@ session_start()
       <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
 <?php
-if(@$_GET['email'] && @$_GET['password']){
-  $sql = "SELECT * FROM `user` WHERE emailId = '{$_GET['email']}' AND password = '{$_GET['password']}';";
+if(@$_POST['email'] && @$_POST['password']){
+  $sql = "SELECT * FROM `users` WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}';";
   $result = mysqli_query($conn, $sql);
   if($result == false){
     echo "login failed. either the email or the password were incorrect";
   } else if($result != false){
     if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
-        $_SESSION['emailId'] = $row['emailId'];
-        if($row['patientId']){
-          $_SESSION['patientId'] = $row['patientId'];
-          echo "<p>{$_SESSION['patientId']}</p> \n";
+        echo "made it";
+        $_SESSION['email'] = $row['email'];
+        if($row['userId']){
+          $_SESSION['userId'] = $row['userId'];
+          echo "<p>{$_SESSION['userId']}</p> \n";
         }
-        echo "<p>{$_SESSION['emailId']}</p>";
+        echo "<p>{$_SESSION['email']}</p>";
       }
     }
   }
