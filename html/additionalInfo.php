@@ -8,11 +8,10 @@
 <?php
 session_start();
 include_once "../db.php";
-$sql = "SELECT patientId, Fname, Lname FROM user WHERE patientId IS NOT NULL;";
+$sql = "SELECT patientId, Fname, Lname FROM `patients` JOIN `users` ON patients.userId = users.userId;";
 $results = mysqli_query($conn, $sql);
 $users = [];
 $jsUsers= [];
-#echo gettype($users);
 $resultCheck = mysqli_num_rows($results);
 $i = 0;
 
@@ -45,7 +44,19 @@ foreach ($users as $key => $value) {
       <input type="submit" value="Sumbit" name="submit" id="submit"/>
       <a href="#" target="_self">Cancel</a>
     </form>
-    <div class="target">
+<?php
+if(@$_POST['id'] && @$_POST['group'] && @$_POST['date'] && @$_POST['name']){
+  print_r($_POST);
+  $id = $_POST['id'];
+  $group = $_POST['group'];
+  $date = $_POST['date'];
+  $sql = "UPDATE patients 
+          SET `patientGroup` = '$group', `admissionDate` = '$date'
+          WHERE `patientId` = '$id';";
+  mysqli_query($conn, $sql);
+}
+?>
+    <div id="target">
 <?php
 foreach($jsUsers as $key => $value){
   echo $value . "  ";
