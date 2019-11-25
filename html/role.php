@@ -7,25 +7,18 @@
 <?php
 session_start();
 include_once "../db.php";
-$sql = "SELECT patientId, Fname, Lname FROM user WHERE patientId IS NOT NULL;";
-$results = mysqli_query($conn, $sql);
-$users = [];
-$jsUsers= [];
-#echo gettype($users);
-$resultCheck = mysqli_num_rows($results);
-$i = 0;
 ?>
 
 <div class=table>
 <?php
-"SELECT * FROM `roles`";
+  $sql = "SELECT * FROM `roles`";
 
   $roles = mysqli_query($conn, $sql);
   echo "<table border=1>";
-  while($row = mysqli_fetch_assoc($results)){
+  while($row = mysqli_fetch_assoc($roles)){
     echo "<tr>";
-    foreach($row as &$roles){
-      echo "<td>{$roles}</td>";
+    foreach($row as &$role){
+      echo "<td>{$role}</td>";
     }
     echo "</tr>";
   }
@@ -48,9 +41,17 @@ $i = 0;
     <form  method="post" accept-charset="utf-8">
       <label class="register"> New Role : <input type="text" value="" name="newRole" id="newRole"/></label>
       <label class="register"> Access Level : <input type="text" value="" name="accessLevel" id="accessLevel"/></label>
-      <button type="submit" value="Submit" name="submit" class="submit" form="login"> Submit </button>
+      <input type=submit value="Submit" name="submit" class="submit">
       <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
+<?php
+  if(@$_POST['newRole'] && @$_POST['accessLevel']){
+    $newRole = $_POST['newRole'];
+    $accessLevel = $_POST['accessLevel'];
+    $sql = "INSERT INTO `roles` VALUES ('$newRole', $accessLevel);";
+    mysqli_query($conn, $sql);
+  }
+?>
   </div>
   </body>
 </html>
