@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once "../db.php";
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +17,11 @@
       <li><a class="hover" href="./index.html" target="_blank"> Logout </a></li>
     </ul>
     <h1>Patients</h1>
+<?php
+print_r($_SESSION);
+?>
     <form  method="post" accept-charset="utf-8">
+      <label>Date: <input type="text"></label>
       <!--This will be for the search options for the patient table-->
       <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     </form>
