@@ -6,6 +6,7 @@ include_once "../db.php";
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/roster.css">
     <meta name="viewport" content="width=device-width" />
     <title>Create Roster</title>
   </head>
@@ -13,7 +14,7 @@ include_once "../db.php";
     <h1>New Roster</h1>
     <form method="post" accept-charset="utf-8">
       <label>Date: <input type="date" value="" name="rosterDate" id="rosterDate"/></label>
-      <label>Supervisor: <select name="supervisorNames" id="supervisorNames"> 
+      <label>Supervisor: <select name="supervisorNames" id="supervisorNames">
 <?php
 $sql = "SELECT Fname, Lname, employeeId FROM `users` u JOIN `employees` e ON u.userId = e.userId WHERE u.role = 'supervisor';";
 $result = mysqli_query($conn, $sql);
@@ -34,7 +35,7 @@ if (mysqli_num_rows($result) > 0) {
   }
 }
 ?>
-        
+
       </select></label>
       <label>Group 1 Caregiver: <select name="group1" id="group1">
 <?php
@@ -84,7 +85,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
       </select>
       </label>
-      <input type="submit" value="Submit" name="rosterSubmit" id="rosterSubmit"/>
+      <input class="submit" type="submit" value="Submit" name="rosterSubmit" id="rosterSubmit"/>
 <?php
 if(@$_POST['rosterDate'] && @$_POST['group1'] && @$_POST['group2'] && @$_POST['group3'] && @$_POST['group4']){
   $date = $_POST['rosterDate'];
@@ -113,7 +114,7 @@ if(@$_POST['rosterDate'] && @$_POST['group1'] && @$_POST['group2'] && @$_POST['g
 }
 ?>
     </form>
-    <a href="#" target="_self">Cancel</a>
+    <a class="cancel" href="./index.html" target="_self"> Cancel </a>
     <table border=1>
       <thead>
         <tr>
