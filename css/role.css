@@ -1,4 +1,3 @@
-
 .cancel{
   background-color: white;
   border-radius: 4px;
@@ -108,4 +107,6 @@ a {
 
 td {
   font-size: 25px;
+  padding-right: 18px;
+  padding-left: 18px;
 }
